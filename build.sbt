@@ -26,7 +26,8 @@ libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2"
 //libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
 
 // https://mvnrepository.com/artifact/org.json4s/json4s-native
-libraryDependencies += "org.json4s" %% "json4s-native" % "3.7.0-M3"
+//libraryDependencies += "org.json4s" %% "json4s-native" % "3.7.0-M3"
+libraryDependencies += "org.json4s" %% "json4s-native" % "3.5.3"
 
 //// https://mvnrepository.com/artifact/org.json4s/json4s-jackson
 //libraryDependencies += "org.json4s" %% "json4s-jackson" % "3.7.0-M3"

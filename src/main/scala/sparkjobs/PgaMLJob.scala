@@ -56,7 +56,7 @@ object PgaMLJob extends Logging {
       $"GIR_%2", $"GIR_%3", $"GIR_%4", $"GIR_%5", $"SG_P1", $"SG_P2", $"SG_P3", $"SG_P4", $"SG_P5", $"SG_TTG1",
       $"SG_TTG2", $"SG_TTG3", $"SG_TTG4", $"SG_TTG5", $"SG_T1", $"SG_T2", $"SG_T3", $"SG_T4", $"SG_T5",
       $"SCRAMBLING_P1", $"SCRAMBLING_P2", $"SCRAMBLING_P3", $"SCRAMBLING_P4", $"SCRAMBLING_P5", $"PAR OR BETTER",
-      $"MISSED GIR", $"MISSED GIR", $"POINTS", $"TOP 10", $"1ST")
+      $"MISSED GIR", $"MISSED GIR", $"TOP 10", $"1ST")
 
     df.show(false)
 
@@ -67,7 +67,7 @@ object PgaMLJob extends Logging {
       "GIR_%2", "GIR_%3", "GIR_%4", "GIR_%5", "SG_P1", "SG_P2", "SG_P3", "SG_P4", "SG_P5", "SG_TTG1",
       "SG_TTG2", "SG_TTG3", "SG_TTG4", "SG_TTG5", "SG_T1", "SG_T2", "SG_T3", "SG_T4", "SG_T5",
       "SCRAMBLING_P1", "SCRAMBLING_P2", "SCRAMBLING_P3", "SCRAMBLING_P4", "SCRAMBLING_P5", "PAR OR BETTER",
-      "MISSED GIR", "MISSED GIR", "POINTS", "TOP 10", "1ST")
+      "MISSED GIR", "MISSED GIR", "TOP 10", "1ST")
     val assembler = new VectorAssembler().setInputCols(featureColumns).setOutputCol("features").setHandleInvalid("skip")
 
     // Use the assembler to transform our DataFrame to the two columns
@@ -120,12 +120,18 @@ object PgaMLJob extends Logging {
       .schema(lrWithElasticPredictions.schema.fieldIndex("features"))
       .metadata
     print(meta.getMetadata("ml_attr").getMetadata("attrs"))
-    // Dustin Johnson
-    // Jordan Speith
-    // Matt Kuchar
-    // Rickie Fowler
-    // Jason Day
-    //
+    // 2016 - 2021 Data
+    // Most likely to be in Top 10 for any given tournament
+    // 1. Dustin Johnson
+    // 2. Justin Thomas
+    // 3. Rory McIlroy
+    // 4. Tony Finau
+    // 5. Webb Simpson
+    // 6. Chez Reavie
+    // 7. Louis Oosthuizen
+    // 8. Kevin Streelman
+    // 9. Russell Knox
+    // 10. Zach Johnson
   }
 
 }
